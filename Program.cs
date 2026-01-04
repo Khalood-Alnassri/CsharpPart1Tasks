@@ -1,4 +1,6 @@
-﻿namespace CsharpTasks
+﻿using System.ComponentModel;
+
+namespace CsharpTasks
 {
     internal class Program
     {
@@ -12,7 +14,7 @@
                 Console.WriteLine(" 2.Check whether a number is even or odd.");
                 Console.WriteLine(" 3.Find the Smallest Number in a List.");
                 Console.WriteLine(" 4.Count Positive and Negative Numbers.");
-
+                Console.WriteLine(" 5.Remove Duplicates from a List.");
 
 
                 int option = int.Parse(Console.ReadLine());
@@ -117,6 +119,36 @@
                         
                         break ;
 
+                        case 5:
+                        Console.WriteLine("Enter the list!");
+                        int lis = int.Parse(Console.ReadLine());
+                        int[] list = new int[lis];
+
+                        for (int i = 0; i < lis; i++)
+                        {
+                            Console.WriteLine(" Enter number :");
+                            list[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        int emptylist = list[0];
+                        for (int i = 0; i < lis; i++) 
+                        {
+
+                            if (lis == 0) 
+                            {
+                                Console.WriteLine("The list is empty!");
+                                emptylist = list[i]; 
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+
+                        Console.WriteLine("The Duplicates list =" + emptylist);
+                        Console.Read();
+
+                        break;
                         
 
 
