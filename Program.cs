@@ -61,20 +61,25 @@
                         Console.WriteLine("Enter how many numbers you need :");
                         int n = int.Parse(Console.ReadLine());
                         int[] numbers =new int[n];
-                        
-                        int smallest = numbers[1];
+
+
                         for (int i = 0; i < n; i++)
                         {
                             Console.WriteLine(" Enter number :");
                             numbers[i] = int.Parse(Console.ReadLine());
-                           
-                            if (smallest > numbers[i])
+                        }
+
+                        int smallest = numbers[1];
+                        for (int i = 0; i < n; i++)
+                        { 
+                        if (smallest > numbers[i])
                             {
                                 smallest = numbers[i];
                             }
+                        }
                             Console.WriteLine(" The smallest number is :" + smallest);
                             Console.Read();
-                        }
+                        
                        
                         break;
 
@@ -83,32 +88,50 @@
                         int nr = int.Parse(Console.ReadLine());
                         int [] array = new int[nr];
 
-                        int positive = 0;
-                        int negative = 0;
+                        
                         for (int i = 0; i < nr; i++)
                         {
                             Console.WriteLine(" Enter number :");
                             array[i] = int.Parse(Console.ReadLine());
+                        }
 
-                            while (!int.TryParse(Console.ReadLine(), out array[i]))
-                            {
-                                Console.WriteLine("Invalid input. Please enter a valid integer:");
-                            }
+                        int positive = 0;
+                        int negative = 0;
+                        for (int i = 0; i < nr; i++)
+                        {
 
-                            if ( array[i] > 0)
+                            if (array[i] > 0)
                             {
-                                positive = positive+1;
+                                positive = positive + 1;
                             }
                             else
                             {
-                                negative = negative+1;
+                                negative = negative + 1;
                             }
+                        }
+
                             Console.WriteLine("The positive numbers =" + positive);
                             Console.WriteLine("The negative numbers =" + negative);
                             Console.Read();
                                     
-                        }
+                        
                         break ;
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
 
 
 
