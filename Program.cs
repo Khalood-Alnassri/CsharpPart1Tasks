@@ -11,6 +11,8 @@
                 Console.WriteLine(" 1.Calculate the average of five numbers.");
                 Console.WriteLine(" 2.Check whether a number is even or odd.");
                 Console.WriteLine(" 3.Find the Smallest Number in a List.");
+                Console.WriteLine(" 4.Count Positive and Negative Numbers.");
+
 
 
                 int option = int.Parse(Console.ReadLine());
@@ -65,15 +67,49 @@
                         {
                             Console.WriteLine(" Enter number :");
                             numbers[i] = int.Parse(Console.ReadLine());
-
+                           
                             if (smallest > numbers[i])
                             {
                                 smallest = numbers[i];
                             }
                             Console.WriteLine(" The smallest number is :" + smallest);
+                            Console.Read();
                         }
                        
                         break;
+
+                        case 4:
+                        Console.WriteLine("Enter how many numbers you need :");
+                        int nr = int.Parse(Console.ReadLine());
+                        int [] array = new int[nr];
+
+                        int positive = 0;
+                        int negative = 0;
+                        for (int i = 0; i < nr; i++)
+                        {
+                            Console.WriteLine(" Enter number :");
+                            array[i] = int.Parse(Console.ReadLine());
+
+                            while (!int.TryParse(Console.ReadLine(), out array[i]))
+                            {
+                                Console.WriteLine("Invalid input. Please enter a valid integer:");
+                            }
+
+                            if ( array[i] > 0)
+                            {
+                                positive = positive+1;
+                            }
+                            else
+                            {
+                                negative = negative+1;
+                            }
+                            Console.WriteLine("The positive numbers =" + positive);
+                            Console.WriteLine("The negative numbers =" + negative);
+                            Console.Read();
+                                    
+                        }
+                        break ;
+
 
 
 
