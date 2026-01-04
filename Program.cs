@@ -10,7 +10,9 @@
                 Console.WriteLine("Select the process you need: ");
                 Console.WriteLine(" 1.Calculate the average of five numbers.");
                 Console.WriteLine(" 2.Check whether a number is even or odd.");
-                
+                Console.WriteLine(" 3.Find the Smallest Number in a List.");
+
+
                 int option = int.Parse(Console.ReadLine());
 
                 switch (option)
@@ -51,6 +53,26 @@
                         {
                             Console.WriteLine("odd");
                         }
+                        break;
+
+                        case 3:
+                        Console.WriteLine("Enter how many numbers you need :");
+                        int n = int.Parse(Console.ReadLine());
+                        int[] numbers =new int[n];
+                        
+                        int smallest = numbers[1];
+                        for (int i = 0; i < n; i++)
+                        {
+                            Console.WriteLine(" Enter number :");
+                            numbers[i] = int.Parse(Console.ReadLine());
+
+                            if (smallest > numbers[i])
+                            {
+                                smallest = numbers[i];
+                            }
+                            Console.WriteLine(" The smallest number is :" + smallest);
+                        }
+                       
                         break;
 
 
