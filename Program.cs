@@ -16,6 +16,7 @@ namespace CsharpTasks
                 Console.WriteLine(" 4.Count Positive and Negative Numbers.");
                 Console.WriteLine(" 5.Remove Duplicates from a List.");
                 Console.WriteLine(" 6. Find All Prime Numbers Up to N.");
+                Console.WriteLine(" 7. Merge Two Sorted Lists.");
 
                 int option = int.Parse(Console.ReadLine());
 
@@ -214,8 +215,28 @@ namespace CsharpTasks
                         }
                         Console.WriteLine("The prime count is =" + Prime_count);
 
+                        break;
+
+                        case 7:
+                        Console.WriteLine("Write list 1:");
+                        string A = Console.ReadLine();
+                        string[] list1 = A.Split(' ');
+                        Console.WriteLine("Write list 2");
+                        string R = Console.ReadLine();
+                        string[] list2 = R.Split(' ');
+
+
+
+
+
+
+
+
+
+
 
                         break;
+
 
 
 
