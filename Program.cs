@@ -120,49 +120,67 @@ namespace CsharpTasks
                         break ;
 
                         case 5:
-                        Console.WriteLine("Enter how many numbers you need in list?");
-                        int lis = int.Parse(Console.ReadLine());
-                        int[] list = new int[lis];
+                        Console.WriteLine("Enter the list of numbers:");
+                        int List = int.Parse(Console.ReadLine());
+                        int[] Lists = new int[List];
 
-                        for (int i = 0; i < lis; i++)
+                        int newList= List;
+                        for (int i = 0; i < List; i++)
                         {
                             Console.WriteLine(" Enter the number :");
-                            list[i] = int.Parse(Console.ReadLine());
+                            Lists[i] = int.Parse(Console.ReadLine());
                         }
 
-                        int L = list[0];
-                        for (int i = 0 ; i < L ; i++) 
+                        bool Duplicate = false;
+                        for (int i = 0; i < newList; i++)
                         {
+                            for (int j = i + 1; j < newList; j++)
+                            {
+                                if (Lists[i] == Lists[j])
+                                {
+                                    Duplicate = true;
 
-                            if (list[i]! == list[i+1]) 
-                            {
-                               list[L++] = list[i];
-                               list[L++] = list[i+1];
+                                    for (int m = j; m < newList-1 ; m++)
+                                    {
+                                      
+                                        Lists[m] = Lists[m + 1];
+                                    
+                                    }
+                                    newList--;
+                                    j --;
+
+                                }
+
                             }
-                            else
-                            {
-                                continue;
-                            }
+
                         }
 
-                        Console.WriteLine("The list =" + list[L]);
-                        Console.Read();
-
-                        break;
-                        
-
-
-
-
-
-
-
-
-
-
-
+                          Console.WriteLine("The List after remoing duplicate:");
+                        for (int i = 0; i< newList; i++)
+                        {
+                            Console.WriteLine( Lists[i] + " ");
+                        }
+                            
 
                         
+
+
+                        break ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
