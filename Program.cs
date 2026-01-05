@@ -15,7 +15,7 @@ namespace CsharpTasks
                 Console.WriteLine(" 3.Find the Smallest Number in a List.");
                 Console.WriteLine(" 4.Count Positive and Negative Numbers.");
                 Console.WriteLine(" 5.Remove Duplicates from a List.");
-
+                Console.WriteLine(" 6. Find All Prime Numbers Up to N.");
 
                 int option = int.Parse(Console.ReadLine());
 
@@ -166,6 +166,27 @@ namespace CsharpTasks
 
 
                         break ;
+
+                        case 6:
+                        Console.WriteLine("Enter how many number :");
+                        int B = int.Parse(Console.ReadLine());
+                        int[] num = new int[B];
+
+                        for(int i = 0; i<B; i++)
+                        {
+                            Console.WriteLine(" Enter the number:");
+                            num[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        int S = 2;
+                        int Prime_num = 0;
+                        for(int i = 0; i <B; i++)
+                        {
+
+                        }
+
+
+                        break;
 
 
 
