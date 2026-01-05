@@ -45,7 +45,7 @@ namespace CsharpTasks
                         Console.WriteLine("The avrage is :" + avg);
                         break;
 
-                        case 2:
+                    case 2:
                         Console.WriteLine("Enter The Number :");
                         float number = float.Parse(Console.ReadLine());
 
@@ -59,10 +59,10 @@ namespace CsharpTasks
                         }
                         break;
 
-                        case 3:
+                    case 3:
                         Console.WriteLine("Enter how many numbers you need :");
                         int n = int.Parse(Console.ReadLine());
-                        int[] numbers =new int[n];
+                        int[] numbers = new int[n];
 
 
                         for (int i = 0; i < n; i++)
@@ -73,24 +73,24 @@ namespace CsharpTasks
 
                         int smallest = numbers[1];
                         for (int i = 0; i < n; i++)
-                        { 
-                        if (smallest > numbers[i])
+                        {
+                            if (smallest > numbers[i])
                             {
                                 smallest = numbers[i];
                             }
                         }
-                            Console.WriteLine(" The smallest number is :" + smallest);
-                            Console.Read();
-                        
-                       
+                        Console.WriteLine(" The smallest number is :" + smallest);
+                        Console.Read();
+
+
                         break;
 
-                        case 4:
+                    case 4:
                         Console.WriteLine("Enter how many numbers you need :");
                         int nr = int.Parse(Console.ReadLine());
-                        int [] array = new int[nr];
+                        int[] array = new int[nr];
 
-                        
+
                         for (int i = 0; i < nr; i++)
                         {
                             Console.WriteLine(" Enter number :");
@@ -112,19 +112,19 @@ namespace CsharpTasks
                             }
                         }
 
-                            Console.WriteLine("The positive numbers =" + positive);
-                            Console.WriteLine("The negative numbers =" + negative);
-                            Console.Read();
-                                    
-                        
-                        break ;
+                        Console.WriteLine("The positive numbers =" + positive);
+                        Console.WriteLine("The negative numbers =" + negative);
+                        Console.Read();
 
-                        case 5:
+
+                        break;
+
+                    case 5:
                         Console.WriteLine("Enter the list of numbers:");
                         int List = int.Parse(Console.ReadLine());
                         int[] Lists = new int[List];
 
-                        int newList= List;
+                        int newList = List;
                         for (int i = 0; i < List; i++)
                         {
                             Console.WriteLine(" Enter the number :");
@@ -140,14 +140,14 @@ namespace CsharpTasks
                                 {
                                     Duplicate = true;
 
-                                    for (int m = j; m < newList-1 ; m++)
+                                    for (int m = j; m < newList - 1; m++)
                                     {
-                                      
+
                                         Lists[m] = Lists[m + 1];
-                                    
+
                                     }
                                     newList--;
-                                    j --;
+                                    j--;
 
                                 }
 
@@ -155,36 +155,64 @@ namespace CsharpTasks
 
                         }
 
-                          Console.WriteLine("The List after remoing duplicate:");
-                        for (int i = 0; i< newList; i++)
+                        Console.WriteLine("The List after remoing duplicate:");
+                        for (int i = 0; i < newList; i++)
                         {
-                            Console.WriteLine( Lists[i] + " ");
+                            Console.WriteLine(Lists[i] + " ");
                         }
-                            
-
-                        
 
 
-                        break ;
 
-                        case 6:
+
+
+                        break;
+
+                    case 6:
                         Console.WriteLine("Enter how many number :");
                         int B = int.Parse(Console.ReadLine());
                         int[] num = new int[B];
 
-                        for(int i = 0; i<B; i++)
+                        for (int i = 0; i < B; i++)
                         {
                             Console.WriteLine(" Enter the number:");
                             num[i] = int.Parse(Console.ReadLine());
                         }
 
-                        int S = 2;
-                        int Prime_num = 0;
-                        for(int i = 0; i <B; i++)
-                        {
 
+                        int Prime_count = 0;
+                        for (int i = 0; i < B; i++)
+                        {
+                            bool Prime_num = true;
+                            if (num[i] <= 1)
+                            {
+                                Prime_num = false;
+                            }
+                            else
+                            {
+                                for (int S = 2; S < num[i]; S++)
+                                {
+
+                                    if (num[i] % S == 0)
+                                    {
+                                        Prime_num = false;
+                                        break;
+                                    }
+
+                                 
+
+                               
+
+                                }
+
+                            }
+
+                            if (Prime_num)
+                            {
+                                Prime_count++;
+                            }
 
                         }
+                        Console.WriteLine("The prime count is =" + Prime_count);
 
 
                         break;
