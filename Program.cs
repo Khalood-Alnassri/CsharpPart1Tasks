@@ -120,24 +120,24 @@ namespace CsharpTasks
                         break ;
 
                         case 5:
-                        Console.WriteLine("Enter the list!");
+                        Console.WriteLine("Enter how many numbers you need in list?");
                         int lis = int.Parse(Console.ReadLine());
                         int[] list = new int[lis];
 
                         for (int i = 0; i < lis; i++)
                         {
-                            Console.WriteLine(" Enter number :");
+                            Console.WriteLine(" Enter the number :");
                             list[i] = int.Parse(Console.ReadLine());
                         }
 
-                        int emptylist = list[0];
-                        for (int i = 0; i < lis; i++) 
+                        int L = list[0];
+                        for (int i = 0 ; i < L ; i++) 
                         {
 
-                            if (lis == 0) 
+                            if (list[i]! == list[i+1]) 
                             {
-                                Console.WriteLine("The list is empty!");
-                                emptylist = list[i]; 
+                               list[L++] = list[i];
+                               list[L++] = list[i+1];
                             }
                             else
                             {
@@ -145,7 +145,7 @@ namespace CsharpTasks
                             }
                         }
 
-                        Console.WriteLine("The Duplicates list =" + emptylist);
+                        Console.WriteLine("The list =" + list[L]);
                         Console.Read();
 
                         break;
